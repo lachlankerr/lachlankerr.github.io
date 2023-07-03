@@ -10,6 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
+github: [metadata]
+
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -59,7 +61,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
@@ -105,17 +107,17 @@ analytics:
 # Site Author
 author:
   name             : "Lachlan Kerr"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Developer"
+  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Software Developer"
   location         : "Sydney, Australia"
   email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:admin@lachlankerr.dev"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://lachlankerr.dev"
+    # - label: "Website"
+      # icon: "fas fa-fw fa-link"
+      # url: "https://lachlankerr.dev"
     # - label: "Twitter"
       # icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -220,7 +222,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -277,6 +279,8 @@ compress_html:
     envs: development
 
 
+date_format: "%A, %-d %B %Y"
+
 # Defaults
 defaults:
   # _posts
@@ -286,7 +290,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
       read_time: true
-      comments: # true
-      share: true
-      related: true
+      comments: false
+      share: false
+      related: false
